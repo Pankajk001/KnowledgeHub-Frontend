@@ -1,0 +1,127 @@
+/* HomePage.css */
+.home-hero {
+    text-align: center;
+    padding: 48px 0 40px;
+}
+
+.home-hero h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.home-hero p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Search & Filter */
+.search-filter-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.search-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0 16px;
+    min-width: 300px;
+}
+
+.search-form svg {
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.search-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    padding: 12px 0;
+    font-size: 0.9375rem;
+    font-family: var(--font-family);
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+.category-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0 16px;
+}
+
+.category-filter svg {
+    color: var(--text-muted);
+}
+
+.category-select {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    padding: 12px 0;
+    font-size: 0.9375rem;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.category-select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Articles Grid */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 40px 0 20px;
+}
+
+.page-info {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .home-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
